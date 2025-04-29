@@ -1,0 +1,17 @@
+class Dog():
+    species='Canis familiaris'
+    def __init__(self, dog_name, dog_breed):
+        self.name=dog_name
+        self.breed=dog_breed
+        self.tricks=[]
+        
+    def teach(self, dog_trick):
+        self.tricks.append(dog_trick)
+        print(f'{self.name} knows {self.tricks}')
+    def knows(self, trick):
+        if trick not in self.tricks:
+            print(f"No, {self.name} doesn't know {trick}")
+            return False
+        else:
+            print(f'Yes, {self.name} knows {trick}')
+            return True
